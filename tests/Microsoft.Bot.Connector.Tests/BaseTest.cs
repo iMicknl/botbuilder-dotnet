@@ -38,6 +38,7 @@ namespace Connector.Tests
 
         public BaseTest()
         {
+            ServiceClientTracing.IsEnabled = true;
             if (mode == HttpRecorderMode.Record)
             {
                 var credentials = new MicrosoftAppCredentials(clientId, clientSecret);
